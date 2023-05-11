@@ -31,7 +31,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
         with:
           ref: master
 
@@ -97,6 +97,7 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_VMDK_IMAGES is not set
           EOF
           # 固件压缩:
           cat >> .config <<EOF

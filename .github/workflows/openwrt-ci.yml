@@ -97,7 +97,7 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
-          CONFIG_VMDK_IMAGES is not set
+          # CONFIG_VMDK_IMAGES is not set
           EOF
           # 固件压缩:
           cat >> .config <<EOF
@@ -129,7 +129,6 @@ jobs:
           # CONFIG_PACKAGE_kmod-usb2-pci=y
           # CONFIG_PACKAGE_kmod-usb3=y
           # EOF
-          
           # 常用LuCI插件选择:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-ttyd=y
@@ -149,7 +148,7 @@ jobs:
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
-          #CONFIG_PACKAGE_luci-theme-netgear=y
+          # CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_luci-theme-argon_new=y
           CONFIG_PACKAGE_luci-theme-atmaterial=y
           CONFIG_PACKAGE_luci-theme-opentomcat=y

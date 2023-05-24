@@ -148,10 +148,16 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
+          # CONFIG_PACKAGE_luci-app-mtwifi=y #联发科 MT WiFi驱动的支持，其它硬件配置不要选这个
+          CONFIG_PACKAGE_luci-app-wirelessregdb=y #WiFi无线
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-ddnsto=y
           CONFIG_PACKAGE_luci-app-msd_lite=y
           CONFIG_PACKAGE_luci-app-uugamebooster=y
+          CONFIG_PACKAGE_luci-app-aria2=y
+          CONFIG_PACKAGE_luci-app-https-dns-proxy=y
+          CONFIG_PACKAGE_luci-app-hnet=y
+          CONFIG_PACKAGE_luci-app-rclone=y
           EOF
           # LuCI主题:
           cat >> .config <<EOF

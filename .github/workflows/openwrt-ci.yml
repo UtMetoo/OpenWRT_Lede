@@ -239,13 +239,6 @@ jobs:
         uses: Shopify/upload-to-release@v1.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./artifact/firmware/*
+          path: ./artifact/firmware/*
           tag: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          file_glob: true
-          body: |
-            Changes in this release:
-            - Added feature X
-            - Fixed bug Y
-          draft: false
-          prerelease: false
+          name: Release ${{ github.ref }}

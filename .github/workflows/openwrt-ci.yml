@@ -13,10 +13,14 @@ on:
   push:
     branches: 
       - master
-    schedule:
-      - cron: 30 2 * * 0,3
+    paths-ignore:
+      - '.github/workflows/**'
+  schedule:
+    - cron: '30 5 * * 0,3'
   release:
     types: [published]
+    branches: 
+      - master
 
 jobs:
 
@@ -227,8 +231,8 @@ jobs:
       - name: Deliver firmware
         uses: actions/upload-artifact@v3
         with:
-          name: OpenWrt_firmware
-          path: ./bin/targets/
+          name: OpenWrt_firmware_X86-64
+          path: ./artifact/firmware/
 
       - name: Upload release asset
         if: github.event == 'release'
@@ -237,4 +241,11 @@ jobs:
           repo_token: ${{ secrets.ACTION_KEY }}
           file: ./artifact/firmware/*
           tag: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           file_glob: true
+          body: |
+            Changes in this release:
+            - Added feature X
+            - Fixed bug Y
+          draft: false
+          prerelease: false

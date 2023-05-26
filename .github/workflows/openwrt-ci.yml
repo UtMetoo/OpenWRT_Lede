@@ -235,7 +235,7 @@ jobs:
           path: ./artifact/firmware/
           
       - name: Create Release
-        if: github.event == 'release'
+        # if: github.event == 'release'
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -247,7 +247,7 @@ jobs:
           prerelease: false
           
       - name: Upload Release Asset
-        if: github.event == 'release'
+        # if: github.event == 'release'
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
         env:

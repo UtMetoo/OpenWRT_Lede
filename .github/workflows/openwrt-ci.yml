@@ -237,7 +237,7 @@ jobs:
       - name: Create Release
         # if: github.event == 'release'
         id: create_release
-        uses: actions/create-release@v2
+        uses: actions/create-release@v1.1.4
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_KEY }}
         with:

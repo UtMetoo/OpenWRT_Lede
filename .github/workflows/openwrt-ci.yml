@@ -134,6 +134,7 @@ jobs:
           CONFIG_PACKAGE_kmod-usb3=y
           EOF
           # 常用LuCI插件选择:
+          # 相关插件清单可参考 https://www.right.com.cn/forum/thread-344825-1-1.html
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y

@@ -13,10 +13,10 @@ on:
   push:
     branches: 
       - master
-    paths-ignore:
-      - '.github/workflows/**'  
+    # paths-ignore:
+    #   - '.github/workflows/**'  
   schedule:
-    - cron: '30 20 * * 0,3'
+    - cron: '30 20 * * 0,3,4'
   release:
     types: [published]
     branches: 

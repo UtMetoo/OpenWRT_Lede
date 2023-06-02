@@ -13,10 +13,10 @@ on:
   push:
     branches: 
       - master
-    # paths-ignore:
-    #   - '.github/workflows/**'  
+    paths-ignore:
+      - '.github/workflows/**'  
   schedule:
-    - cron: '30 20 * * 0,3,4'
+    - cron: '30 20 * * 0-5'
   release:
     types: [published]
     branches: 
@@ -30,7 +30,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.repository.owner.id == github.event.sender.id
+    # if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
 

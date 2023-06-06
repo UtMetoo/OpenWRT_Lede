@@ -236,16 +236,18 @@ jobs:
           name: OpenWrt_firmware_X86-64
           path: ./artifact/firmware/
           
+      - name: Set Tag Name
+        run: echo ::set-env name=TAG_NAME::$(date +%Y%m%d)
+          
       - name: Create Release
         # if: github.event == 'release'
         id: create_release
         uses: actions/create-release@v1.1.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: $(date +'%Y%m%d')
         with:
-          tag_name: ${{ env.TAG }}
-          release_name: Release on ${{ env.TAG }}
+          tag_name: ${{ env.TAG_NAME }}
+          release_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
           draft: false
           prerelease: false
           

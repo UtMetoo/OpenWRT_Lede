@@ -237,7 +237,7 @@ jobs:
           path: ./artifact/firmware/
           
       - name: Set Tag Name
-        run: echo ::set-env name=TAG_NAME::$(date +%Y%m%d)
+        run: echo "TAG_NAME=$(date +%Y%m%d)" >> $GITHUB_ENV
           
       - name: Create Release
         # if: github.event == 'release'

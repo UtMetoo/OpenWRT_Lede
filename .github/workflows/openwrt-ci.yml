@@ -104,7 +104,8 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
-          KERNEL_PATCHVER := 5.15
+          CONFIG_LINUX_KERNEL_VERSION="5.15.*"
+          # KERNEL_PATCHVER := 5.15
           EOF
           # 固件压缩:
           cat >> .config <<EOF

@@ -252,7 +252,10 @@ jobs:
           release_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
           draft: false
           prerelease: false
-          
+         
+      - name: Find Zip File
+        run: echo "ZIP_PATH=$(find ./artifact/firmware -name '*.gz')" >> $GITHUB_ENV
+  
       - name: Upload Release Asset
         if: github.event.repository.owner.id != github.event.sender.id
         id: upload-release-asset 
@@ -261,7 +264,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./artifact/firmware/*.gz
+          asset_path: ${{ env.ZIP_PATH }}
           asset_name: OpenWrt_firmware_X86-64
           asset_content_type: application/gzip
           

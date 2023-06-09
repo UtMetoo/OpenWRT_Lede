@@ -103,7 +103,7 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
-          CONFIG_LINUX_KERNEL_VERSION="5.15.*"
+          CONFIG_LINUX_KERNEL_VERSION="5.15.70"
           # KERNEL_PATCHVER := 5.15
           EOF
           # 固件压缩:
@@ -242,7 +242,7 @@ jobs:
         run: echo "TAG_NAME=$(date +%Y%m%d)" >> $GITHUB_ENV
           
       - name: Create Release
-        # if: github.event == 'release'
+        if: github.event.repository.owner.id != github.event.sender.id
         id: create_release
         uses: actions/create-release@v1.1.4
         env:
@@ -254,14 +254,14 @@ jobs:
           prerelease: false
           
       - name: Upload Release Asset
-        # if: github.event == 'release'
+        if: github.event.repository.owner.id != github.event.sender.id
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./artifact/firmware/OpenWrt_firmware_X86-64.zip
-          asset_name: OpenWrt_firmware_X86-64.zip
-          asset_content_type: application/zip
+          asset_path: ./artifact/firmware/*.gz
+          asset_name: OpenWrt_firmware_X86-64
+          asset_content_type: application/gzip
           

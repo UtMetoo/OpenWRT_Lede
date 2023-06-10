@@ -162,6 +162,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus is not set
+          # CONFIG_PACKAGE_luci-app-unblockmusic is not set
           # CONFIG_PACKAGE_luci-app-wireless-regdb=y
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-ddnsto=y
@@ -269,6 +270,7 @@ jobs:
           asset_content_type: application/gzip
           
       - name: Upload binaries to release
+        if: github.event.repository.owner.id == github.event.sender.id
         uses: svenstaro/upload-release-action@v2
         with:
           # repo_name: owner/repository-name

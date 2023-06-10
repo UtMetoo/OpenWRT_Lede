@@ -114,11 +114,15 @@ jobs:
           cat >> .config <<EOF
           CONFIG_EFI_IMAGES=y
           EOF
-          # IPv6&intel 无线网卡支持:
+          # IPv6支持:
           cat >> .config <<EOF
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
+          EOF
+          # intel无线网卡支持
+          cat >> .config <<EOF
           CONFIG_PACKAGE_kmod-iwlwifi=y
+          CONFIG_PACKAGE_iwlwifi-firmware=y
           EOF
           # 多文件系统支持:
           cat >> .config <<EOF
@@ -158,7 +162,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus is not set
-          CONFIG_PACKAGE_luci-app-wireless-regdb=y
+          # CONFIG_PACKAGE_luci-app-wireless-regdb=y
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-ddnsto=y
           CONFIG_PACKAGE_luci-app-msd_lite=y
@@ -172,8 +176,8 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argon=y
           # CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_luci-theme-argone=y
-          # CONFIG_PACKAGE_luci-theme-atmaterial=y
-          # CONFIG_PACKAGE_luci-theme-opentomcat=y
+          CONFIG_PACKAGE_luci-theme-atmaterial=y
+          CONFIG_PACKAGE_luci-theme-opentomcat=y
           EOF
           # 常用软件包:
           cat >> .config <<EOF
@@ -184,7 +188,6 @@ jobs:
           CONFIG_PACKAGE_tree=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_wget=y
-          # CONFIG_PACKAGE_wireless-tools=m
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF
@@ -264,4 +267,18 @@ jobs:
           asset_path: ./artifact/firmware/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
           asset_name: OpenWrt_firmware_X86-64
           asset_content_type: application/gzip
+          
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          # repo_name: owner/repository-name
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./artifact/firmware/*.gz
+          asset_name: OpenWrt_firmware_X86-64
+          tag: ${{ env.TAG_NAME }}
+          overwrite: true
+          file_glob: true
+          body: "This is my release text"
+
+
           

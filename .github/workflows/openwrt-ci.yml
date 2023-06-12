@@ -179,6 +179,7 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argone=y
           CONFIG_PACKAGE_luci-theme-atmaterial=y
           CONFIG_PACKAGE_luci-theme-opentomcat=y
+          CONFIG_PACKAGE_luci-theme-opentomato=y
           EOF
           # 常用软件包:
           cat >> .config <<EOF

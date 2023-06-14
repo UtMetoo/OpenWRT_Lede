@@ -103,8 +103,6 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
-          CONFIG_KERNEL_VERSION="5.4.244"
-          # KERNEL_PATCHVER := 5.15
           EOF
           # 固件压缩:
           cat >> .config <<EOF
@@ -171,12 +169,13 @@ jobs:
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-rclone=y
           CONFIG_PACKAGE_luci-app-store=y
+          CONFIG_PACKAGE_luci-app-argone-config=y
           EOF
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
           # CONFIG_PACKAGE_luci-theme-netgear=y
-          CONFIG_PACKAGE_luci-theme-argonne=y
+          CONFIG_PACKAGE_luci-theme-argone=y
           CONFIG_PACKAGE_luci-theme-atmaterial=y
           CONFIG_PACKAGE_luci-theme-opentomcat=y
           CONFIG_PACKAGE_luci-theme-opentomato=y
@@ -274,14 +273,14 @@ jobs:
         if: github.event.repository.owner.id == github.event.sender.id
         uses: svenstaro/upload-release-action@v2
         with:
-          # repo_name: owner/repository-name
+          repo_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./artifact/firmware/*.gz
           asset_name: OpenWrt_firmware_X86-64
           tag: ${{ env.TAG_NAME }}
           overwrite: true
           file_glob: true
-          body: "This is my release text"
+          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}."
 
 
           

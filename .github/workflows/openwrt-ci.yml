@@ -117,10 +117,12 @@ jobs:
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
           EOF
-          # intel无线网卡支持 (Only for intel 3165NGW wireless card)
+          # intel无线网卡支持 (Only for intel 3165NGW wireless)
           cat >> .config <<EOF
           CONFIG_PACKAGE_kmod-iwlwifi=y
           CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y 
+          CONFIG_PACKAGE_wpad-openssl=y
+          CONFIG_PACKAGE_hostapd=y
           EOF
           # 多文件系统支持:
           cat >> .config <<EOF
@@ -166,14 +168,14 @@ jobs:
           CONFIG_PACKAGE_luci-app-msd_lite=y
           CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-aria2=y
-          CONFIG_PACKAGE_luci-app-rclone=y
-          # CONFIG_PACKAGE_luci-app-store=y
+          # CONFIG_PACKAGE_luci-app-rclone=y
+          CONFIG_PACKAGE_luci-app-store=y
           CONFIG_PACKAGE_luci-app-argone-config=y
           EOF
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
-          # CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-design=y
           CONFIG_PACKAGE_luci-theme-argone=y
           # CONFIG_PACKAGE_luci-theme-atmaterial=y
           # CONFIG_PACKAGE_luci-theme-opentomcat=y

@@ -161,14 +161,13 @@ jobs:
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus is not set
           # CONFIG_PACKAGE_luci-app-unblockmusic is not set
-          # CONFIG_PACKAGE_luci-app-wireless-regdb=y
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-ddnsto=y
           CONFIG_PACKAGE_luci-app-msd_lite=y
           CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-rclone=y
-          CONFIG_PACKAGE_luci-app-store=y
+          # CONFIG_PACKAGE_luci-app-store=y
           CONFIG_PACKAGE_luci-app-argone-config=y
           EOF
           # LuCI主题:
@@ -245,42 +244,39 @@ jobs:
       - name: Set Tag Name
         run: echo "TAG_NAME=$(date +%Y%m%d)" >> $GITHUB_ENV
           
-      - name: Create Release
-        if: github.event.repository.owner.id != github.event.sender.id
-        id: create_release
-        uses: actions/create-release@v1.1.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ env.TAG_NAME }}
-          release_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
-          draft: false
-          prerelease: false
+#       - name: Create Release
+#         if: github.event.repository.owner.id != github.event.sender.id
+#         id: create_release
+#         uses: actions/create-release@v1.1.4
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         with:
+#           tag_name: ${{ env.TAG_NAME }}
+#           release_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
+#           draft: false
+#           prerelease: false
   
-      - name: Upload Release Asset
-        if: github.event.repository.owner.id != github.event.sender.id
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./artifact/firmware/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
-          asset_name: openwrt-x86-64-generic-squashfs-combined-efi.img.gz
-          asset_content_type: application/gzip
+#       - name: Upload Release Asset
+#         if: github.event.repository.owner.id != github.event.sender.id
+#         id: upload-release-asset 
+#         uses: actions/upload-release-asset@v1
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         with:
+#           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+#           asset_path: ./artifact/firmware/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
+#           asset_name: openwrt-x86-64-generic-squashfs-combined-efi.img.gz
+#           asset_content_type: application/gzip
           
       - name: Upload binaries to release
-        if: github.event.repository.owner.id == github.event.sender.id
+        if: github.event.repository.owner.id != github.event.sender.id
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
+          repo_name: X86 Platform OpenWRT firmware
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./artifact/firmware/*.gz
           asset_name: OpenWrt_firmware_X86-64
           tag: ${{ env.TAG_NAME }}
           overwrite: true
           file_glob: true
-          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}."
-
-
-          
+          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}. \n **Kernel Version:** 5.15.* \n **test HW :** HP t430 *with intel wireless card 3165* "

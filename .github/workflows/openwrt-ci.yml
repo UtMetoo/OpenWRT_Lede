@@ -117,10 +117,12 @@ jobs:
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
           EOF
-          # intel无线网卡支持 (Only for intel 3165NGW wireless)
+          # intel无线网卡支持 (Only for intel 3165 ac7260 and ax210 wireless card)
           cat >> .config <<EOF
           CONFIG_PACKAGE_kmod-iwlwifi=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y 
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl9260=y
+          CONFIG_PACKAGE_iwlwifi-firmware-ax210=y
           CONFIG_PACKAGE_wpad-openssl=y
           CONFIG_PACKAGE_hostapd-utils=y
           EOF
@@ -168,7 +170,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-msd_lite=y
           CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-aria2=y
-          # CONFIG_PACKAGE_luci-app-rclone=y
           CONFIG_PACKAGE_luci-app-store=y
           CONFIG_PACKAGE_luci-app-argone-config=y
           EOF
@@ -177,9 +178,6 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-design=y
           CONFIG_PACKAGE_luci-theme-argone=y
-          # CONFIG_PACKAGE_luci-theme-atmaterial=y
-          # CONFIG_PACKAGE_luci-theme-opentomcat=y
-          # CONFIG_PACKAGE_luci-theme-opentomato=y
           EOF
           # 常用软件包:
           cat >> .config <<EOF
@@ -190,6 +188,11 @@ jobs:
           CONFIG_PACKAGE_tree=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_wget=y
+          EOF
+          # [Testing feature] Docker and Management UI
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_docker=y
+          CONFIG_PACKAGE_luci-app-dockerman=y
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF

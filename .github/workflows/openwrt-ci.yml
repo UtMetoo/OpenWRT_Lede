@@ -120,8 +120,8 @@ jobs:
           # intel无线网卡支持 (Only for intel 3165 ac7260 and ax210 wireless card)
           cat >> .config <<EOF
           CONFIG_PACKAGE_kmod-iwlwifi=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl9260=y
+          # CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl8265=y
           CONFIG_PACKAGE_iwlwifi-firmware-ax210=y
           CONFIG_PACKAGE_wpad-openssl=y
           CONFIG_PACKAGE_hostapd-utils=y
@@ -284,4 +284,4 @@ jobs:
           tag: ${{ env.TAG_NAME }}
           overwrite: true
           file_glob: true
-          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}. \n\n **Kernel Version:** 5.15.* \n **Testing HW:** HP t430 *with intel wireless card 3165* \n"
+          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}. \n\n **Kernel Version:** 5.15.* \n **Testing HW:** HP t430 *with intel wireless card 8265* \n"

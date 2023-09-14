@@ -35,7 +35,7 @@ jobs:
 
     - name: Set git config
       run : |
-        git config --global user.email "40649437+gaoxuan864@users.noreply.github.com"
+        git config --global user.email "40649437+UtMetoo@users.noreply.github.com"
         git config --global user.name "github-action"
         git config --global pull.rebase false
         git config --global --list

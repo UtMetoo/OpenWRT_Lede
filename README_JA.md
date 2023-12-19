@@ -282,19 +282,3 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 2. OpenWRT の開発を学びたいが、何から始めたらいいかわからないですか？自己学習のモチベーションが上がらない？基礎知識が足りない？ズオ氏の初心者 OpenWRT トレーニングコースで一緒に OpenWRT 開発を学びましょう。お申し込みは[こちら](http://forgotfun.org/2018/04/openwrt-training-2018.html)をクリックしてください。
 3. QCA IPQ60xx オープンソースリポジトリ: <https://github.com/coolsnowwolf/openwrt-gl-ax1800>
 4. OpenWRT アーカイブリポジトリ: <https://github.com/coolsnowwolf/openwrt>
-
-
-
-## 寄付
-
-<!--
-如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
-
- ![star](doc/star.png)
--->
-このプロジェクトがあなたのお役に立てたのであれば、このプロジェクトの発展を支援するための寄付をご検討ください。
-
-<div align="left">
-  <img src="./doc/star.png" width = "400" alt="" align=center />
-</div>
-<br>

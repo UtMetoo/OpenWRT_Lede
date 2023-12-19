@@ -10,12 +10,6 @@ I18N: [English](README_EN.md) | [简体中文](README.md) | [日本語](README_J
 3. Rockchip RK3568 预编译固件发布 Release 下载更新地址 (包括 H68K )：<https://github.com/coolsnowwolf/lede/releases/tag/20220716>
 -->
 
-If you have technical questions for discussion or sharing, feel free to join the following channels:
-1. QQ Group: *OpenWRT Firmware Technical Research Group*, Group Number is `891659613`. Join the group: [Link](https://jq.qq.com/?_wv=1027&k=XL8SK5aC "Op固件技术研究群").
-    -  [Click to download QQ client](https://im.qq.com/pcqq).
-2. Telegram Group: *OpenWRT Firmware Technical Research Group*. Join the group: [Link](https://t.me/JhKgAA6Hx1 "OP 编译官方大群").
-3. Rockchip **RK3568** precompiled firmware release (including H68K): [Click to download](https://github.com/coolsnowwolf/lede/releases/tag/20220716).
-
 <div align="left">
     <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.11.4bb55247rdHEAP&id=702787603594&ns=1&abbucket=17#detail
 ">
@@ -311,19 +305,5 @@ Yingku R2 - N95/N300 Mini Four-Network HomeLab Server
 <a href="https://item.taobao.com/item.htm?ft=t&id=719159813003">
   <img src="doc/r1.jpg" width = "600" alt="" align=center />
 </a>
-</div>
-<br>
-
-## Donation
-
-<!--
-如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
-
- ![star](doc/star.png)
--->
-If this project did helped you, please consider donating to support the development of this project.
-
-<div align="left">    
-  <img src="./doc/star.png" width = "400" alt="" align=center />
 </div>
 <br>

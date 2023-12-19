@@ -270,24 +270,3 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 3. QCA IPQ60xx open source repository: <https://github.com/coolsnowwolf/openwrt-gl-ax1800>
 4. OpenWRT Archive repository: <https://github.com/coolsnowwolf/openwrt>
 
-## Introduction to Software Routers
-<!--
-硬酷R2 - N95/N300迷你四网HomeLab服务器
-
-(商品介绍页面 - 硬酷科技（支持花呗）)：
-
-[预售链接](https://item.taobao.com/item.htm?ft=t&id=719159813003)
-
-[![r1](doc/r1.jpg)](https://item.taobao.com/item.htm?ft=t&id=719159813003)
--->
-Yingku R2 - N95/N300 Mini Four-Network HomeLab Server
-
-(Introduction page - Yingku Technology (support AliPay Huabei)):
-
-[Pre-sale link](https://item.taobao.com/item.htm?ft=t&id=719159813003)
-<div align="left">
-<a href="https://item.taobao.com/item.htm?ft=t&id=719159813003">
-  <img src="doc/r1.jpg" width = "600" alt="" align=center />
-</a>
-</div>
-<br>

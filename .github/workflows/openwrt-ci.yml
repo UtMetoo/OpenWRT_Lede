@@ -246,7 +246,7 @@ jobs:
           
       - name: Upload binaries to release
         if: github.event.repository.owner.id != github.event.sender.id
-        uses: svenstaro/upload-release-action@v3
+        uses: svenstaro/upload-release-action@v2
         with:
           release_name: OpenWRT X86 firmware Release on ${{ env.TAG_NAME }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}

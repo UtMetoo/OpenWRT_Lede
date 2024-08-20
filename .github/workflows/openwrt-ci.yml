@@ -255,4 +255,4 @@ jobs:
           tag: ${{ env.TAG_NAME }}
           overwrite: true
           file_glob: true
-          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}.\n\n **Plugin list:** AdguardHome; DDNSto; OpenClash; UUGames; Zerotier; app-store; Docker \n\n **Kernel Version:** 6.1.* \n **Testing HW:** HP t430 *with intel wireless card 8265* \n"
+          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}.\n\n **Plugin list:** AdguardHome; DDNSto; OpenClash; UUGames; Zerotier; app-store; Docker \n\n **Kernel Version:** 6.6.* \n **Testing HW:** HP t430 *with intel wireless card 8265* \n"

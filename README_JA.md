@@ -14,16 +14,7 @@ I18N: [English](README_EN.md) | [简体中文](README.md) | [日本語](README_J
 1. QQ グループ: *OpenWRT ファームウェア技術研究グループ*、グループ番号は `891659613` です。グループに参加する: [リンク](https://jq.qq.com/?_wv=1027&k=XL8SK5aC "Op固件技术研究群")。
     -  [クリックして QQ クライアントをダウンロードする](https://im.qq.com/pcqq)。
 2. Telegram グループ: *OpenWRT ファームウェア技術研究グループ*。グループに参加する: [リンク](https://t.me/JhKgAA6Hx1 "OP 编译官方大群")。
-3. Rockchip **RK3568** コンパイル済みファームウェアリリース (H68K を含む): [クリックしてダウンロード](https://github.com/coolsnowwolf/lede/releases/tag/20220716)。
 
-<div align="left">
-    <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.11.4bb55247rdHEAP&id=702787603594&ns=1&abbucket=17#detail
-">
-        <img style="margin: 0px 0px 0px 40px;" src="https://github.com/coolsnowwolf/lede/blob/master/doc/h68k.jpg?raw=true" width=600  />
-    </a>
-</div>
-
-4. Rockchip **RK3588**コンパイル済みファームウェアリリース（H68K を含む）: [クリックしてダウンロード](https://github.com/coolsnowwolf/lede/releases/tag/20230609)。
 
 
 ## 注意
@@ -306,38 +297,3 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 3. QCA IPQ60xx オープンソースリポジトリ: <https://github.com/coolsnowwolf/openwrt-gl-ax1800>
 4. OpenWRT アーカイブリポジトリ: <https://github.com/coolsnowwolf/openwrt>
 
-## ソフトウェアルーター入門
-<!--
-硬酷R2 - N95/N300迷你四网HomeLab服务器
-
-(商品介绍页面 - 硬酷科技（支持花呗）)：
-
-[预售链接](https://item.taobao.com/item.htm?ft=t&id=719159813003)
-
-[![r1](doc/r1.jpg)](https://item.taobao.com/item.htm?ft=t&id=719159813003)
--->
-Yingku R2 - N95/N300 Mini Four-Network HomeLab Server
-
-(紹介ページ - Yingku Technology (support AliPay Huabei)):
-
-[先行販売リンク](https://item.taobao.com/item.htm?ft=t&id=719159813003)
-<div align="left">
-<a href="https://item.taobao.com/item.htm?ft=t&id=719159813003">
-  <img src="doc/r1.jpg" width = "600" alt="" align=center />
-</a>
-</div>
-<br>
-
-## 寄付
-
-<!--
-如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
-
- ![star](doc/star.png)
--->
-このプロジェクトがあなたのお役に立てたのであれば、このプロジェクトの発展を支援するための寄付をご検討ください。
-
-<div align="left">
-  <img src="./doc/star.png" width = "400" alt="" align=center />
-</div>
-<br>

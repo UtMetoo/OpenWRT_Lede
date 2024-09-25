@@ -15,14 +15,7 @@ If you have technical questions for discussion or sharing, feel free to join the
     -  [Click to download QQ client](https://im.qq.com/pcqq).
 2. Telegram Group: *OpenWRT Firmware Technical Research Group*. Join the group: [Link](https://t.me/JhKgAA6Hx1 "OP 编译官方大群").
 
-## ArmSoM Sige Board Series Introduction
 
-ArmSoM-Sige Series: Your All-in-One Powerhouse for Soft Routing, SBCs, Mini Servers, and Home Automation.
-
-[ ArmSoM Store ](https://www.aliexpress.com/store/1102800175)
-
-Buy Link ：
-[![sige1-en](doc/sige-en.jpg)](https://aliexpress.com/item/3256807356692995.html)
 
 ## Notice
 <!--
@@ -305,38 +298,4 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 3. QCA IPQ60xx open source repository: <https://github.com/coolsnowwolf/openwrt-gl-ax1800>
 4. OpenWRT Archive repository: <https://github.com/coolsnowwolf/openwrt>
 
-## Introduction to Software Routers
-<!--
-硬酷R2 - N95/N300迷你四网HomeLab服务器
 
-(商品介绍页面 - 硬酷科技（支持花呗）)：
-
-[预售链接](https://item.taobao.com/item.htm?ft=t&id=719159813003)
-
-[![r1](doc/r1.jpg)](https://item.taobao.com/item.htm?ft=t&id=719159813003)
--->
-Yingku R2 - N95/N300 Mini Four-Network HomeLab Server
-
-(Introduction page - Yingku Technology (support AliPay Huabei)):
-
-[Pre-sale link](https://item.taobao.com/item.htm?ft=t&id=719159813003)
-<div align="left">
-<a href="https://item.taobao.com/item.htm?ft=t&id=719159813003">
-  <img src="doc/r1.jpg" width = "600" alt="" align=center />
-</a>
-</div>
-<br>
-
-## Donation
-
-<!--
-如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
-
- ![star](doc/star.png)
--->
-If this project did helped you, please consider donating to support the development of this project.
-
-<div align="left">    
-  <img src="./doc/star.png" width = "400" alt="" align=center />
-</div>
-<br>

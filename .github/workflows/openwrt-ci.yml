@@ -162,7 +162,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-ddnsto=y
           CONFIG_PACKAGE_luci-app-msd_lite=y
-          CONFIG_PACKAGE_luci-app-uugamebooster=y
+          # CONFIG_PACKAGE_luci-app-uugamebooster is not set
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-store=y
           CONFIG_PACKAGE_luci-app-argone-config=y
@@ -254,4 +254,4 @@ jobs:
           tag: ${{ env.TAG_NAME }}
           overwrite: true
           file_glob: true
-          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}.\n\n **Plugin list:** AdguardHome; DDNSto; OpenClash; UUGames; Zerotier; app-store; Docker \n\n **Kernel Version:** 6.6.* \n **Testing HW:** HP t430 *with intel wireless card 8265* \n"
+          body: "These .gz files were uploaded by Github actions on ${{ env.TAG_NAME }}.\n\n **Plugin list:** AdguardHome; DDNSto; OpenClash; Zerotier; app-store; Docker \n\n **Kernel Version:** 6.6.* \n **Testing HW:** HP t430 *with intel wireless card 8265* \n"

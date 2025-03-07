@@ -43,8 +43,9 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          if [docker images -q]:
+          if [ -n "$(docker images -q)" ]; then
             docker rmi $(docker images -q)
+          fi
           sudo -E rm -rf /usr/share/dotnet /opt/ghc /etc/mysql /etc/php /etc/apt/sources.list.d /usr/local/lib/android
           sudo -E apt-mark hold grub-efi-amd64-signed
           sudo -E apt update

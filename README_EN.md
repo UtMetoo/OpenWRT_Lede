@@ -168,3 +168,4 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 2. Want to learn OpenWRT development but don't know how to start? Can't motivate yourself for self-learning? Do not have enough fundamental knowledge? Learn OpenWRT development with Mr. Zuo through his Beginner OpenWRT Training Course. Click [here](http://forgotfun.org/2018/04/openwrt-training-2018.html) to register.
 3. QCA IPQ60xx open source repository: <https://github.com/coolsnowwolf/openwrt-gl-ax1800>
 4. OpenWRT Archive repository: <https://github.com/coolsnowwolf/openwrt>
+

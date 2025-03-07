@@ -168,8 +168,3 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 4. OpenWRT アーカイブリポジトリ: <https://github.com/coolsnowwolf/openwrt>
 
 
-
-<div align="left">
-  <img src="./doc/star.png" width = "400" alt="" align=center />
-</div>
-<br>
